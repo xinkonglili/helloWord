@@ -1,14 +1,16 @@
 ### 注意事项
 #### 1、代码包包名和文件目录名，不要求一致，但是同一个目录下的文件的第一行声明的所属包，必须一致，比如文件目录叫hello，但是代码包包名可以声明为main
+   <p>golang基础之context包的使用
+     1、WithCancel：创建一个带有Clear()关闭函数的ctx 
+     2、WithDeadline：创建一个带有超时时间点的ctx
+     3、WithTimeout：创建一个有超时时间的ctx
+     4、WithValue：创建了一个携带了参数的ctx
+     5、Background：创建一个没有Deadline，没有Value，也不能被Cancel的emptyCtx
+     6、TODO：也会创建一个emptyCtx
+     7、Context的基础接口：Deadline(),Done(),Err(),Value()</p>
 
-golang基础之context包的使用
-1、WithCancel：创建一个带有Clear()关闭函数的ctx
-2、WithDeadline：创建一个带有超时时间点的ctx
-3、WithTimeout：创建一个有超时时间的ctx
-4、WithValue：创建了一个携带了参数的ctx
-5、Background：创建一个没有Deadline，没有Value，也不能被Cancel的emptyCtx
-6、TODO：也会创建一个emptyCtx
-7、Context的基础接口：Deadline(),Done(),Err(),Value()
+
+
 
 
 ```
