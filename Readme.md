@@ -10,6 +10,15 @@
      7、Context的基础接口：Deadline(),Done(),Err(),Value()
 
 #### 外层控制内层传参
+    详解；为什么 time.Tick(time.Second) 可以放到range里面循环，博客地址:https://www.twle.cn/t/19246
+    t := time.Newtimer(2time.Hour ) 初始化一个距离到期时间还有2个小时的一个日期，t是个指针类型的变量
+    通过定时器的字段 C, 我们可以及时得知定时器到期的这个事件来临，C 是一个 chan time.Time 类型的缓冲通道，
+    一旦触及到期时间，定时器就会向自己的 C 字段发送一个 time.Time 类型的元素值 
+``` 
+case <- t.C:
+   do_some_thing()
+```
+
 ```
     package main
     
